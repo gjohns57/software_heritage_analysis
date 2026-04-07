@@ -20,6 +20,7 @@ Output:
 """
 
 import requests
+from requests.exceptions import ConnectionError, Timeout, ChunkedEncodingError
 import pandas as pd
 import time
 import os
@@ -29,6 +30,8 @@ from collections import Counter
 
 INPUT_FILE = "data/sampled_origins.csv"
 OUTPUT_FILE = "data/language_data.csv"
+MAX_RETRIES = 5
+REQUEST_TIMEOUT = 30
 
 # Map file extensions to language names (top ~60 languages)
 EXTENSION_TO_LANG = {
@@ -62,49 +65,108 @@ EXTENSION_TO_LANG = {
 }
 
 
+def safe_request(session, url, params=None):
+    """Make a request with retry logic for connection errors."""
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            return session.get(url, params=params, timeout=REQUEST_TIMEOUT)
+        except (ConnectionError, Timeout, ChunkedEncodingError) as e:
+            if attempt == MAX_RETRIES:
+                print(f"\n  Failed after {MAX_RETRIES} retries: {type(e).__name__}")
+                return None
+            wait = 10 * attempt
+            print(f"\n  Connection error (attempt {attempt}/{MAX_RETRIES}), retrying in {wait}s...")
+            time.sleep(wait)
+    return None
+
+
+def smart_github_wait(response, tqdm_bar):
+    """Dynamically pace requests based on actual GitHub rate limit headers.
+
+    Reads X-RateLimit-Remaining and X-RateLimit-Reset from the response
+    and calculates the optimal sleep time to spread requests evenly
+    across the remaining window, avoiding bursts that trigger limits.
+    """
+    remaining = int(response.headers.get("X-RateLimit-Remaining", 100))
+    reset_time = int(response.headers.get("X-RateLimit-Reset", time.time() + 3600))
+    limit = int(response.headers.get("X-RateLimit-Limit", 5000))
+    seconds_until_reset = max(reset_time - time.time(), 1)
+
+    # Log rate limit info periodically
+    if remaining % 500 == 0 or remaining < 50:
+        tqdm_bar.write(f"  [Rate limit: {remaining}/{limit} remaining, resets in {seconds_until_reset:.0f}s]")
+
+    if remaining <= 10:
+        # Almost out — wait for full reset
+        wait = seconds_until_reset + 5
+        tqdm_bar.write(f"  Almost out of rate limit ({remaining} left). Waiting {wait:.0f}s for reset...")
+        time.sleep(wait)
+        return
+
+    # Spread remaining requests evenly across the time window
+    # Use only 90% of remaining to leave a safety buffer
+    safe_remaining = remaining * 0.9
+    sleep_time = seconds_until_reset / safe_remaining
+
+    # Clamp between 2.5s (avoid secondary rate limit) and 10s (don't waste time)
+    # GitHub secondary rate limit triggers on bursts — 2.5s minimum keeps us safe
+    sleep_time = max(2.5, min(sleep_time, 10.0))
+    time.sleep(sleep_time)
+
+
 def fetch_github_languages(repo_full_name, session):
     """Fetch language byte counts from GitHub API."""
     url = f"https://api.github.com/repos/{repo_full_name}/languages"
-    response = session.get(url)
+    response = safe_request(session, url)
 
-    if response.status_code == 403:
-        # Rate limited
-        reset_time = int(response.headers.get("X-RateLimit-Reset", 0))
-        wait = max(reset_time - time.time(), 0) + 5
-        print(f"\n  GitHub rate limited. Waiting {wait:.0f}s...")
+    if response is None:
+        return None, "connection_error", None
+
+    if response.status_code == 403 or response.status_code == 429:
+        remaining = int(response.headers.get("X-RateLimit-Remaining", 0))
+        retry_after = response.headers.get("Retry-After")
+
+        if retry_after:
+            # Secondary rate limit — has Retry-After header
+            wait = int(retry_after) + 5
+            print(f"\n  GitHub secondary rate limit. Retry-After: {wait}s...")
+        elif remaining > 0:
+            # Secondary rate limit — still have primary quota but got blocked
+            wait = 90  # GitHub docs recommend waiting ~1 min for secondary limits
+            print(f"\n  GitHub secondary rate limit (abuse detection). Waiting {wait}s...")
+        else:
+            # Primary rate limit exhausted
+            reset_time = int(response.headers.get("X-RateLimit-Reset", 0))
+            wait = max(reset_time - time.time(), 0) + 5
+            print(f"\n  GitHub primary rate limit exhausted. Waiting {wait:.0f}s for reset...")
+
         time.sleep(wait)
-        response = session.get(url)
+        response = safe_request(session, url)
+        if response is None:
+            return None, "connection_error", None
 
     if response.status_code == 404:
-        return None, "not_found"
+        return None, "not_found", response
     if response.status_code != 200:
-        return None, f"error_{response.status_code}"
+        return None, f"error_{response.status_code}", response
 
     languages = response.json()
     if not languages:
-        return None, "no_languages"
+        return None, "no_languages", response
 
-    return languages, "ok"
+    return languages, "ok", response
 
 
 def fetch_swh_file_extensions(origin_url, swh_session):
     """Fetch file listing from the latest SWH snapshot and analyze extensions."""
-    # Get the latest visit with a snapshot
     encoded_url = requests.utils.quote(origin_url, safe="")
     visits_url = f"https://archive.softwareheritage.org/api/1/origin/{encoded_url}/visits/"
 
-    response = swh_session.get(visits_url, params={"per_page": 10})
-
-    if response.status_code == 429:
-        retry_after = int(response.headers.get("Retry-After", 60))
-        time.sleep(retry_after + 1)
-        response = swh_session.get(visits_url, params={"per_page": 10})
-
-    if response.status_code != 200:
+    response = safe_request(swh_session, visits_url, params={"per_page": 10})
+    if response is None or response.status_code != 200:
         return None
 
     visits = response.json()
-    # Find a visit with a snapshot
     snapshot_id = None
     for visit in visits:
         if visit.get("snapshot"):
@@ -114,23 +176,15 @@ def fetch_swh_file_extensions(origin_url, swh_session):
     if not snapshot_id:
         return None
 
-    # Get snapshot branches (to find HEAD / main branch)
     snap_url = f"https://archive.softwareheritage.org/api/1/snapshot/{snapshot_id}/"
-    time.sleep(3.5)
-    response = swh_session.get(snap_url)
-
-    if response.status_code == 429:
-        retry_after = int(response.headers.get("Retry-After", 60))
-        time.sleep(retry_after + 1)
-        response = swh_session.get(snap_url)
-
-    if response.status_code != 200:
+    time.sleep(1.0)
+    response = safe_request(swh_session, snap_url)
+    if response is None or response.status_code != 200:
         return None
 
     snapshot_data = response.json()
     branches = snapshot_data.get("branches", {})
 
-    # Find HEAD or main/master branch
     target_id = None
     for branch_name in ["HEAD", "refs/heads/main", "refs/heads/master"]:
         branch = branches.get(branch_name)
@@ -147,12 +201,10 @@ def fetch_swh_file_extensions(origin_url, swh_session):
     if not target_id:
         return None
 
-    # Get the directory of the revision
-    time.sleep(3.5)
+    time.sleep(1.0)
     rev_url = f"https://archive.softwareheritage.org/api/1/revision/{target_id}/"
-    response = swh_session.get(rev_url)
-
-    if response.status_code != 200:
+    response = safe_request(swh_session, rev_url)
+    if response is None or response.status_code != 200:
         return None
 
     rev_data = response.json()
@@ -160,12 +212,10 @@ def fetch_swh_file_extensions(origin_url, swh_session):
     if not dir_id:
         return None
 
-    # Get directory listing
-    time.sleep(3.5)
+    time.sleep(1.0)
     dir_url = f"https://archive.softwareheritage.org/api/1/directory/{dir_id}/"
-    response = swh_session.get(dir_url)
-
-    if response.status_code != 200:
+    response = safe_request(swh_session, dir_url)
+    if response is None or response.status_code != 200:
         return None
 
     entries = response.json()
@@ -188,7 +238,6 @@ def fetch_swh_file_extensions(origin_url, swh_session):
 def determine_primary_language(github_langs, swh_langs):
     """Pick the primary language from available data."""
     if github_langs:
-        # GitHub gives byte counts — the top one is primary
         primary = max(github_langs, key=github_langs.get)
         total_bytes = sum(github_langs.values())
         return primary, github_langs.get(primary, 0) / total_bytes if total_bytes else 0
@@ -240,7 +289,14 @@ def main():
     gh_session.headers["Accept"] = "application/vnd.github.v3+json"
     if github_token:
         gh_session.headers["Authorization"] = f"token {github_token}"
-        print("Using authenticated GitHub requests (5000 req/hr)")
+        # Check actual rate limit before starting
+        check = safe_request(gh_session, "https://api.github.com/rate_limit")
+        if check and check.status_code == 200:
+            rl = check.json().get("resources", {}).get("core", {})
+            print(f"GitHub rate limit: {rl.get('remaining', '?')}/{rl.get('limit', '?')} remaining, "
+                  f"resets at {time.strftime('%H:%M:%S', time.localtime(rl.get('reset', 0)))}")
+        else:
+            print("Using authenticated GitHub requests")
     else:
         print("Using unauthenticated GitHub requests (60 req/hr)")
 
@@ -265,12 +321,13 @@ def main():
     github_errors = 0
     swh_fetched = 0
 
-    for _, row in tqdm(remaining.iterrows(), total=len(remaining), desc="Fetching languages"):
+    pbar = tqdm(remaining.iterrows(), total=len(remaining), desc="Fetching languages")
+    for _, row in pbar:
         origin_url = row["url"]
         repo_full_name = row.get("repo_full_name", origin_url.replace("https://github.com/", ""))
 
         # 1. GitHub API
-        github_langs, status = fetch_github_languages(repo_full_name, gh_session)
+        github_langs, status, last_response = fetch_github_languages(repo_full_name, gh_session)
         if status not in ("ok", "no_languages"):
             github_errors += 1
 
@@ -303,11 +360,13 @@ def main():
             write_header = False
             results = []
 
-        # Rate limiting for GitHub (authenticated: ~1.4 req/s is safe)
-        if github_token:
-            time.sleep(0.75)
+        # Smart rate limiting — dynamically paced from GitHub headers
+        if github_token and last_response is not None:
+            smart_github_wait(last_response, pbar)
+        elif github_token:
+            time.sleep(2.0)  # Fallback if no response (connection error)
         else:
-            time.sleep(60)  # Very slow without token
+            time.sleep(60)  # Unauthenticated
 
     # Write remaining
     if results:
