@@ -59,9 +59,20 @@ python src/fetch_languages_graphql.py --github-token YOUR_GITHUB_TOKEN
 
 **Output:** `data/language_data.csv`
 
+#### Step 4: Merge & Preprocess
+
+Merges visit and language data, filters to projects with both a detected language and at least one snapshot, computes lifecycle features (lifespan, activity density), classifies projects as active/inactive/abandoned, and adds language metadata (generation, memory safety, paradigm, etc.).
+
+```bash
+python src/preprocess.py
+```
+
+**Output:** `data/analysis_dataset.csv` (12,330 clean projects)
+
 ### Data Files
 
 - `data/link_store.csv`: ~10.7M origins with URLs and visit endpoints (1.6 GB)
 - `data/sampled_origins.csv`: 20K sampled GitHub origins
 - `data/visit_data.csv`: Visit history per project
 - `data/language_data.csv`: Language data per project
+- `data/analysis_dataset.csv`: Merged, cleaned, analysis-ready dataset (12,330 projects)

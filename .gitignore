@@ -1,6 +1,5 @@
 .venv
 __pycache__/
 *.pyc
-data/**
 !data/.gitkeep
 token.txt
