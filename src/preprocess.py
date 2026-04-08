@@ -1,9 +1,9 @@
 """
-Phase 4: Merge visit + language data, clean, and engineer features.
+Phase 4: Merge visit + language + commit data, clean, and engineer features.
 
-Merges visit_data.csv and language_data.csv, filters to projects with
-both language and snapshot data, computes lifecycle features, and
-classifies projects as active/inactive/abandoned.
+Merges visit_data.csv, language_data.csv, and commit_data.csv, filters to
+projects with valid data, computes lifecycle features, and classifies
+projects as active/inactive/abandoned.
 
 Usage:
     python src/preprocess.py
@@ -18,6 +18,7 @@ from datetime import datetime
 
 VISIT_FILE = "data/visit_data.csv"
 LANGUAGE_FILE = "data/language_data.csv"
+COMMIT_FILE = "data/commit_data.csv"
 OUTPUT_FILE = "data/analysis_dataset.csv"
 
 # Language metadata: year introduced, category flags
@@ -58,17 +59,116 @@ LANGUAGE_INFO = {
 
 GENERATION_LABELS = {1: "1st gen (pre-1980)", 2: "2nd gen (1980s-1990s)", 3: "3rd gen (2000s+)"}
 
+# Group similar/derived languages into their parent language
+LANGUAGE_GROUPS = {
+    # JavaScript family
+    "CoffeeScript": "JavaScript",
+    "LiveScript": "JavaScript",
+    "EJS": "JavaScript",
+
+    # TypeScript stays separate (it's distinct enough)
+
+    # CSS family
+    "SCSS": "CSS",
+    "Less": "CSS",
+    "Sass": "CSS",
+    "Stylus": "CSS",
+
+    # HTML family / template engines
+    "Pug": "HTML",
+    "Handlebars": "HTML",
+    "Mustache": "HTML",
+    "EJS": "HTML",
+    "Twig": "HTML",
+    "Smarty": "HTML",
+    "Blade": "HTML",
+    "Astro": "HTML",
+    "MDX": "HTML",
+    "Jinja": "HTML",
+    "Svelte": "HTML",
+
+    # Visual Basic family
+    "Visual Basic 6.0": "Visual Basic",
+    "Visual Basic .NET": "Visual Basic",
+    "VBA": "Visual Basic",
+    "VBScript": "Visual Basic",
+
+    # Shell family
+    "Batchfile": "Shell",
+    "PowerShell": "Shell",
+
+    # Lisp family
+    "Common Lisp": "Lisp",
+    "Emacs Lisp": "Lisp",
+    "Racket": "Lisp",
+    "Scheme": "Lisp",
+
+    # SQL family
+    "PLpgSQL": "SQL",
+    "PLSQL": "SQL",
+    "TSQL": "SQL",
+
+    # Config/build tools → not real programming languages, mark as "Other"
+    "Dockerfile": "Other",
+    "Makefile": "Other",
+    "CMake": "Other",
+    "HCL": "Other",
+    "Nix": "Other",
+    "Jsonnet": "Other",
+    "Starlark": "Other",
+    "SaltStack": "Other",
+    "Puppet": "Other",
+    "Bicep": "Other",
+
+    # Markup/docs → not programming languages
+    "TeX": "Other",
+    "Markdown": "Other",
+    "Rich Text Format": "Other",
+    "Roff": "Other",
+    "R Markdown": "Other",
+    "RMarkdown": "Other",
+    "Bikeshed": "Other",
+    "RAML": "Other",
+    "YAML": "Other",
+    "XML": "Other",
+
+    # Hardware description
+    "SystemVerilog": "Verilog",
+    "VHDL": "Verilog",
+
+    # Objective-C++ → Objective-C
+    "Objective-C++": "Objective-C",
+
+    # Cuda → C++
+    "Cuda": "C++",
+    "HLSL": "C++",
+    "GLSL": "C++",
+
+    # Arduino → C++
+    "Arduino": "C++",
+
+    # ASP → C#
+    "ASP": "C#",
+    "ASP.NET": "C#",
+
+    # Apex → Java
+    "Apex": "Java",
+}
+
 
 def main():
     print("Loading data...")
     visits = pd.read_csv(VISIT_FILE)
     languages = pd.read_csv(LANGUAGE_FILE)
+    commits = pd.read_csv(COMMIT_FILE)
 
     print(f"  Visit data: {len(visits):,} records")
     print(f"  Language data: {len(languages):,} records")
+    print(f"  Commit data: {len(commits):,} records")
 
     # --- Merge ---
     merged = pd.merge(visits, languages, on="url", how="inner")
+    merged = pd.merge(merged, commits[["url", "commit_count", "commit_status"]], on="url", how="left")
     print(f"  Merged: {len(merged):,} records")
 
     # --- Filter to usable projects ---
@@ -79,7 +179,26 @@ def main():
     ].copy()
     print(f"  After filtering (language + snapshots): {len(clean):,} records")
 
+    # --- Remove ambiguous repos (GitHub 404 but SWH had code) ---
+    # These could be private repos still active — would wrongly classify as abandoned
+    ambiguous = (clean["commit_status"] == "not_found") & (clean["has_full_visit"] == True)
+    n_ambiguous = ambiguous.sum()
+    clean = clean[~ambiguous].copy()
+    print(f"  Removed {n_ambiguous} ambiguous repos (possibly private) → {len(clean):,} records")
+
+    # --- Group similar languages ---
+    clean["original_language"] = clean["primary_language"]  # keep the original
+    clean["primary_language"] = clean["primary_language"].map(
+        lambda x: LANGUAGE_GROUPS.get(x, x)
+    )
+    grouped_count = (clean["original_language"] != clean["primary_language"]).sum()
+    print(f"  Grouped {grouped_count} projects into parent languages")
+    print(f"  Unique languages: {clean['primary_language'].nunique()}")
+
     # Remove markup/config-only projects (HTML, CSS) — optional, keep for now but flag them
+    code_languages = set(LANGUAGE_INFO.keys()) - {"HTML", "CSS"}
+
+    # Flag code vs markup languages
     code_languages = set(LANGUAGE_INFO.keys()) - {"HTML", "CSS"}
 
     # --- Parse dates ---
@@ -143,6 +262,7 @@ def main():
         "days_since_last_visit", "project_status", "is_abandoned",
         "observation_time_days",
         "num_visits", "num_snapshots", "visits_per_year",
+        "commit_count",
         "has_full_visit", "github_languages",
     ]
     output = clean[output_cols]
@@ -172,6 +292,12 @@ def main():
     print(f"\nAbandonment rate by generation:")
     gen_abandon = output.groupby("generation_label")["is_abandoned"].mean()
     print((gen_abandon * 100).round(1).to_string())
+
+    print(f"\nCommit count statistics:")
+    print(output["commit_count"].describe().to_string())
+    for t in [10, 20, 50, 100]:
+        c = (output["commit_count"] >= t).sum()
+        print(f"  >= {t} commits: {c:,} ({100*c/len(output):.1f}%)")
 
     code_only = output[output["is_code_language"]]
     print(f"\nCode-only projects (excluding HTML/CSS): {len(code_only):,}")
