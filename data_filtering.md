@@ -1,12 +1,40 @@
-# Data Filtering & Justification
+# Data Collection, Filtering & Justification
 
-## Starting Point
+## Data Collection
 
-We began with a **random sample of 20,000 GitHub projects** drawn from 10,088,607 GitHub origins in the Software Heritage archive. For each project, we collected three types of data:
+### Step 1: Building the Origin Dataset (10.7 Million Projects)
 
-- **Visit history** from the SWH API (20,000 records)
-- **Language data** from GitHub's GraphQL API (20,000 records)
-- **Commit counts** from GitHub's GraphQL API (20,000 records)
+The Software Heritage (SWH) archive provides a REST API endpoint (`/api/1/origins/`) that allows paginated iteration over all archived project origins. We developed a crawler (`src/get_origins.py`) that iterates through this endpoint, collecting the URL and visit API endpoint for each project. The crawler supports interruption and resumption — on Ctrl-C it saves its current pagination link and picks up from that point on restart.
+
+This process ran over **multiple days**, collecting a total of **10,715,000 origins** stored in `data/link_store.csv` (1.6 GB). The origins span multiple platforms:
+
+| Platform | Origins | Percentage |
+|----------|---------|------------|
+| GitHub | 10,088,607 | 94.2% |
+| GitLab | 176,708 | 1.6% |
+| npm | 128,678 | 1.2% |
+| Bitbucket | 104,056 | 1.0% |
+| Others (PyPI, Go, Maven, Crates.io, etc.) | 216,951 | 2.0% |
+
+### Step 2: Sampling (10.7M → 20,000)
+
+Analyzing all 10.7 million origins is infeasible given API rate limits and project scope. We filtered to **GitHub-only origins** (10,088,607 projects) for consistency, since GitHub provides structured language metadata through its API. From these, we drew a **random sample of 20,000 projects** using a fixed seed (42) for reproducibility.
+
+### Step 3: Collecting Metadata for Each Sampled Project
+
+For each of the 20,000 sampled projects, we collected three types of metadata:
+
+- **Visit history** from the SWH API — periodic snapshots showing when each project was first discovered, last active, and how frequently it was updated. Collected via `src/fetch_visits.py`, which handles rate limiting, automatic retries, and supports resuming.
+
+- **Language data** from GitHub's GraphQL API — primary language classification and byte counts per language. We used GraphQL batching (50 repos per request) via `src/fetch_languages_graphql.py`, completing 20,000 repos in ~30 minutes.
+
+- **Commit counts** from GitHub's GraphQL API — total number of commits on the default branch. Also batched via GraphQL (`src/fetch_commits.py`), completing in ~25 minutes.
+
+---
+
+## Starting Point for Filtering
+
+With all metadata collected, we have **20,000 projects** each with visit history, language classification, and commit counts. The following filters clean this into an analysis-ready dataset.
 
 ## Filter 1: Inner Join on URL (20,000 → 19,996)
 

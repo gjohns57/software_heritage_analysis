@@ -27,17 +27,17 @@ We filtered to GitHub-only origins (10,088,607 projects) because GitHub provides
 
 ---
 
-## Phase 3: Collecting Project Metadata 🔄 IN PROGRESS (~90% done)
+## Phase 3: Collecting Project Metadata 
 
 To answer our research questions, we need two pieces of information for each sampled project: **when was it active** (lifecycle data) and **what language is it written in**.
 
-### 3a. Visit History Collection 🔄 RUNNING NOW
+### 3a. Visit History Collection
 
 The SWH archive tracks "visits" — periodic snapshots of each project over time. By collecting the full visit history for each project, we can determine when a project was first discovered, when it was last active, and how frequently it was updated. This directly enables us to classify projects as active, inactive, or abandoned.
 
 **Script:** `src/fetch_visits.py` → **Output:** `data/visit_data.csv`
 
-### 3b. Language Detection ⬜ UP NEXT
+### 3b. Language Detection 
 
 We detect each project's primary programming language using two complementary approaches: the **GitHub API** (provides byte counts per language — most accurate) and **SWH file extension analysis** as a fallback for projects where GitHub data is unavailable. This dual-source approach aligns with the methodology used by Desmazières et al. [6] in their MSR 2025 study.
 
@@ -45,7 +45,7 @@ We detect each project's primary programming language using two complementary ap
 
 ---
 
-## Phase 4: Data Processing & Feature Engineering ⬜ NEXT PHASE
+## Phase 4: Data Processing & Feature Engineering 
 
 Once all raw data is collected, we merge visit history and language data into a single analysis-ready dataset. This phase involves:
 
@@ -61,7 +61,7 @@ Once all raw data is collected, we merge visit history and language data into a 
 
 ---
 
-## Phase 5: Statistical Analysis & Visualization ⬜ FINAL PHASE
+## Phase 5: Statistical Analysis & Visualization 
 
 This is where we answer our research questions using survival analysis methods and produce publication-quality figures.
 
