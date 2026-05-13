@@ -1,0 +1,2061 @@
+Unauthenticated SWH session — ~3.2 s between requests
+Tip: pass --token or set SWH_API_TOKEN for faster collection
+
+Per-bucket target : 1000 origins  (5 buckets × 1000)
+Commit log depth  : 10 pages × 100 commits
+Already collected : 0 origins
+
+  Buckets: pre_1990=0/1000 | 1990s=0/1000 | 2000s=0/1000 | 2010s=0/1000 | 2020s=0/1000
+
+============================================================
+PHASE 1 — Historical forges (Savannah, SourceForge)
+============================================================
+
+Enumerating origins matching 'savannah.gnu.org' ...
+
+  [REST] Rate limited — pausing 1s. Resuming at 23:24:47 UTC
+
+  [REST] Rate limited — pausing 16s. Resuming at 23:25:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 23:25:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 23:25:49 UTC
+
+  [REST] Rate limited — pausing 14s. Resuming at 23:26:09 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 23:26:50 UTC
+
+  [REST] Rate limited — pausing 14s. Resuming at 23:27:10 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 23:27:51 UTC
+
+  [REST] Rate limited — pausing 14s. Resuming at 23:28:11 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 23:28:52 UTC
+
+  [REST] Rate limited — pausing 13s. Resuming at 23:29:11 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 23:29:53 UTC
+
+  [REST] Rate limited — pausing 13s. Resuming at 23:30:11 UTC
+  Found 4,437 origins
+
+  [REST] Rate limited — pausing 49m 3s. Resuming at 00:30:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 00:30:40 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 00:30:54 UTC
+
+  [REST] Rate limited — pausing 48m 58s. Resuming at 01:30:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:35:18 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 01:35:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:35:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:35:49 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 01:36:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:36:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:36:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:36:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:36:31 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 01:36:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:36:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:37:01 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 01:37:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:37:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:37:31 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 01:37:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:37:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:38:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:38:27 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:38:37 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 01:38:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:38:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:39:01 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 01:39:11 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 01:39:22 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 01:39:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:39:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:39:53 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 01:40:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:40:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 01:40:38 UTC
+
+  [REST] Rate limited — pausing 49m 16s. Resuming at 02:30:50 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 02:31:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:31:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:31:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:31:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:31:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:31:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:32:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:32:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:32:17 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:32:28 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:32:39 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:32:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:33:01 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 02:33:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:33:17 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:33:32 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 02:33:46 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:33:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:34:03 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:34:14 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 02:34:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:34:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:34:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:35:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:35:18 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 02:35:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:35:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:35:50 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 02:36:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:36:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:36:20 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 02:36:32 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 02:36:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:36:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:36:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:37:03 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 02:37:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:37:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:37:31 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 02:37:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:37:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:37:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:38:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:38:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:38:38 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 02:38:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:39:01 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:39:12 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 02:39:23 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 02:39:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:39:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:39:54 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 02:40:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:40:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 02:40:39 UTC
+
+  [REST] Rate limited — pausing 49m 16s. Resuming at 03:30:50 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 03:31:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:31:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:31:32 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 03:31:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:31:55 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 03:32:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:32:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:32:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:32:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:32:40 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 03:32:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:33:01 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 03:33:18 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 03:33:33 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 03:33:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:33:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:34:03 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 03:34:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:34:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:34:27 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 03:34:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:34:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:35:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:35:19 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 03:35:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:35:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:35:46 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:35:52 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 03:36:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:36:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:36:21 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 03:36:33 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 03:36:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 03:36:54 UTC
+
+  [REST] Rate limited — pausing 48m 24s. Resuming at 04:30:51 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 04:33:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:33:34 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 04:33:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:33:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:34:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:34:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:34:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:34:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:34:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:35:20 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 04:35:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:35:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:35:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:35:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:36:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:36:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:36:22 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 04:36:34 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 04:36:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:36:54 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 04:37:05 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 04:37:20 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 04:37:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:37:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:37:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:38:01 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 04:38:15 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 04:38:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:38:41 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 04:38:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:39:11 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 04:39:25 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 04:39:40 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 04:39:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:40:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:40:12 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 04:40:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:40:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:40:53 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 04:41:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 04:41:36 UTC
+
+  [REST] Rate limited — pausing 48m 21s. Resuming at 05:30:52 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 05:31:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 05:31:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 05:31:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 05:41:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 05:42:22 UTC
+
+  [REST] Rate limited — pausing 48m 19s. Resuming at 06:30:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 06:31:27 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 06:31:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 06:31:49 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 06:32:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 06:33:10 UTC
+
+  [REST] Rate limited — pausing 47m 42s. Resuming at 07:30:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:31:05 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 07:32:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:33:12 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 07:33:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:33:23 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:33:52 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:33:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:34:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:34:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:34:32 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 07:34:46 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:35:02 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:35:17 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:35:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:35:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:36:05 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 07:36:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:36:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:36:35 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 07:36:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:36:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:37:06 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 07:37:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:37:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:37:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:37:42 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 07:37:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:38:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:38:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:38:23 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:38:37 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 07:38:52 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:39:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:39:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:39:24 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 07:39:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:39:53 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 07:40:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:40:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:40:25 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 07:40:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:40:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:40:57 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 07:41:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:41:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:41:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:41:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:41:43 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:41:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:42:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:42:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:42:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 07:42:37 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 07:42:48 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 07:43:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 07:43:09 UTC
+
+  [REST] Rate limited — pausing 47m 40s. Resuming at 08:30:55 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 08:31:06 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 08:31:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:31:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:31:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:31:42 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 08:31:55 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:32:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:32:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:32:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:32:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:32:42 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:32:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:33:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:33:13 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:33:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:33:35 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 08:33:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:34:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:34:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:34:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:34:32 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:34:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:34:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:35:05 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 08:35:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:35:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:35:31 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 08:35:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:35:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:36:06 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 08:36:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:36:25 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:36:36 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 08:36:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:36:56 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:37:07 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:37:19 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 08:37:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:37:43 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 08:37:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:38:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:38:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:38:23 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:38:38 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:38:53 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 08:39:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:39:25 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:39:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:39:54 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:40:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:40:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:40:27 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:40:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:40:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:40:58 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:41:10 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 08:41:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:41:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:41:44 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:41:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:42:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:42:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:42:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:42:37 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 08:42:49 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 08:43:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 08:43:10 UTC
+
+  [REST] Rate limited — pausing 47m 41s. Resuming at 09:30:56 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 09:31:07 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 09:31:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:31:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:31:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:31:43 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 09:31:56 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 09:32:14 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:32:21 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:32:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:32:43 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 09:32:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:33:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:33:14 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:33:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:33:35 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 09:33:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:33:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:34:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:34:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:34:33 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:34:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:34:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:35:05 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 09:35:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:35:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:35:32 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:35:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:35:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:35:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:36:08 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:36:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:36:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:36:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:36:43 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:36:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:36:57 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:37:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:37:19 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:37:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:37:44 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 09:37:56 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:38:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:38:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:38:24 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 09:38:38 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 09:38:54 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 09:39:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:39:25 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:39:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:39:55 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:40:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:40:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:40:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:40:29 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 09:40:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:40:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:40:58 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:41:10 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:41:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:41:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:41:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 09:41:59 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:42:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:42:17 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:42:27 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:42:38 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 09:42:49 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 09:43:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 09:43:11 UTC
+
+  [REST] Rate limited — pausing 47m 41s. Resuming at 10:30:57 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:31:07 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:31:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:31:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:31:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:31:43 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:31:57 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 10:32:14 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:32:22 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:32:33 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:32:44 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:32:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:33:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:33:15 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 10:33:25 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:33:36 UTC
+
+  [REST] Rate limited — pausing 9s. Resuming at 10:33:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:34:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:34:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:34:34 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:34:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:34:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:35:05 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:35:19 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:35:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:35:33 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 10:35:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:35:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:36:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:36:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:36:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:36:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:36:44 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:36:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:36:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:37:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:37:20 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 10:37:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:37:44 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 10:37:57 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:38:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:38:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:38:25 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 10:38:39 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:38:55 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 10:39:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:39:26 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 10:39:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:39:55 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 10:40:10 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 10:40:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:40:29 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 10:40:44 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:40:59 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:41:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:41:12 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:41:25 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 10:41:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:41:46 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 10:41:59 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:42:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:42:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:42:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:42:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:42:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:42:50 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 10:43:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 10:43:12 UTC
+
+  [REST] Rate limited — pausing 47m 41s. Resuming at 11:30:58 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:31:07 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 11:31:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:31:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:31:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:31:45 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 11:31:58 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 11:32:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:32:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:32:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:32:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:32:46 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:32:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:33:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:33:16 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:33:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 11:33:37 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 11:33:59 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:34:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:34:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:34:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:34:36 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 11:34:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:34:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:35:06 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:35:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:35:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:35:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:35:35 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 11:35:52 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:35:59 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:36:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:36:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:36:27 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 11:36:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:36:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:36:52 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:36:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:37:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:37:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:37:21 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:37:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:37:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:37:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:37:58 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 11:38:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:38:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:38:26 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 11:38:40 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 11:38:56 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 11:39:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:39:26 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 11:39:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:39:56 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 11:40:11 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:40:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:40:30 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 11:40:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:41:00 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:41:13 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 11:41:25 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 11:41:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:41:47 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 11:42:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:42:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:42:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:42:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:42:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:42:52 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 11:43:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:43:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 11:43:14 UTC
+
+  [REST] Rate limited — pausing 47m 39s. Resuming at 12:30:59 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:31:08 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 12:31:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:31:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:31:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:31:46 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 12:31:58 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 12:32:16 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 12:32:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:32:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:32:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:32:59 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:33:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:33:17 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:33:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:33:26 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:33:39 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 12:34:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:34:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:34:17 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:34:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:34:39 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:34:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:34:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:35:07 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 12:35:22 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:35:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:35:36 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:35:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:36:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:36:10 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:36:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:36:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:36:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:36:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:36:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:37:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:37:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:37:23 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:37:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:37:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:37:58 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:38:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:38:16 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:38:27 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 12:38:41 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 12:38:56 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 12:39:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:39:28 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 12:39:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:39:44 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 12:40:12 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 12:40:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:40:31 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 12:40:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:40:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:41:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:41:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:41:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:41:26 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 12:41:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:41:49 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 12:42:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:42:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:42:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:42:27 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:42:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:42:52 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 12:43:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 12:43:15 UTC
+
+  [REST] Rate limited — pausing 47m 39s. Resuming at 13:30:59 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:31:09 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:31:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:31:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:31:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:31:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:31:59 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 13:32:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:32:18 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:32:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:32:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:32:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:33:00 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:33:11 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:33:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:33:27 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:33:40 UTC
+
+  [REST] Rate limited — pausing 10s. Resuming at 13:34:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:34:18 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:34:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:34:40 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:34:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:34:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:35:09 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:35:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:35:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:35:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:35:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:35:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:35:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:36:10 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 13:36:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:36:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:36:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:36:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:36:55 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 13:37:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:37:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:37:24 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:37:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:37:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:37:59 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:38:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:38:16 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:38:28 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 13:38:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:38:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:38:58 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 13:39:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:39:28 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 13:39:45 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 13:40:13 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 13:40:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:40:32 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 13:40:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:40:56 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 13:41:03 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 13:41:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:41:26 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 13:41:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:41:49 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 13:42:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:42:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:42:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:42:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:42:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:42:54 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 13:43:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 13:43:16 UTC
+
+  [REST] Rate limited — pausing 47m 39s. Resuming at 14:31:00 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:31:09 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 14:31:23 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:31:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:31:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:31:48 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:32:00 UTC
+
+  [REST] Rate limited — pausing 9s. Resuming at 14:32:19 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:32:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:32:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:32:47 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:33:00 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:33:11 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 14:33:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:33:28 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:33:41 UTC
+
+  [REST] Rate limited — pausing 10s. Resuming at 14:34:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:34:18 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:34:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:34:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:34:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:34:53 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:35:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:35:10 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:35:23 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 14:35:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:35:39 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 14:35:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:36:11 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:36:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:36:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:36:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:36:46 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 14:36:56 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:37:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:37:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:37:25 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 14:37:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:37:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:38:00 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:38:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:38:17 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:38:29 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 14:38:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:38:58 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 14:39:14 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:39:29 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 14:39:45 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:39:47 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 14:40:13 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 14:40:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:40:32 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 14:40:46 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:40:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:41:04 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:41:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:41:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:41:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:41:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:41:50 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 14:42:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:42:11 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 14:42:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:42:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:42:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:42:54 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 14:43:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 14:43:16 UTC
+
+  [REST] Rate limited — pausing 47m 39s. Resuming at 15:31:01 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:31:10 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:31:24 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:31:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:31:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:31:49 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:32:00 UTC
+
+  [REST] Rate limited — pausing 9s. Resuming at 15:32:19 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 15:32:27 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:32:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:32:48 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:33:00 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:33:12 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:33:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:33:29 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 15:33:41 UTC
+
+  [REST] Rate limited — pausing 10s. Resuming at 15:34:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:34:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:34:30 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:34:41 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:34:54 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:35:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:35:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:35:23 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:35:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:35:39 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:35:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:36:11 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 15:36:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:36:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:36:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:36:47 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:36:57 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 15:37:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:37:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:37:26 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:37:39 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:37:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:38:01 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:38:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:38:18 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:38:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:38:35 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 15:38:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:38:46 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:39:01 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:39:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:39:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:39:31 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 15:39:48 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:40:14 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 15:40:22 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:40:32 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 15:40:47 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:40:58 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:41:05 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:41:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:41:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:41:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:41:51 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 15:42:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:42:12 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:42:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:42:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:42:44 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 15:42:55 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 15:43:10 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 15:43:17 UTC
+
+  [REST] Rate limited — pausing 47m 38s. Resuming at 16:31:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:31:03 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:31:11 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 16:31:24 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:31:36 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:31:43 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:31:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:32:01 UTC
+
+  [REST] Rate limited — pausing 9s. Resuming at 16:32:19 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 16:32:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:32:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:32:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:33:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:33:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:33:13 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 16:33:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:33:29 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:33:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:33:42 UTC
+
+  [REST] Rate limited — pausing 10s. Resuming at 16:34:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:34:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:34:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:34:42 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 16:34:55 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:35:02 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:35:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:35:24 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 16:35:33 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:35:40 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 16:35:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:35:59 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:36:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:36:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:36:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:36:41 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:36:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:36:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:36:59 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:37:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:37:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:37:27 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 16:37:40 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:37:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:38:01 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:38:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:38:19 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:38:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:38:36 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 16:38:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:39:01 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 16:39:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:39:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:39:31 UTC
+
+  [REST] Rate limited — pausing 7s. Resuming at 16:39:49 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 16:40:14 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 16:40:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:40:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:40:48 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:41:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:41:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:41:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:41:42 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:42:58 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 16:43:11 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 16:43:18 UTC
+
+  [REST] Rate limited — pausing 47m 41s. Resuming at 17:31:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:31:11 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:31:25 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:31:36 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:31:44 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:31:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:32:02 UTC
+
+  [REST] Rate limited — pausing 9s. Resuming at 17:32:20 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:32:28 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:32:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:32:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:32:51 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 17:33:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:33:14 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:33:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:33:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:33:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:33:43 UTC
+
+  [REST] Rate limited — pausing 9s. Resuming at 17:34:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:34:20 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:34:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:34:43 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:34:56 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:35:03 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:35:14 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:35:25 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:35:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:35:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:35:42 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 17:36:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:36:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:36:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:36:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:36:42 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:36:51 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 17:37:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:37:06 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:37:17 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:37:29 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:37:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:37:51 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:38:02 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:38:13 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:38:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:38:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:38:37 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:38:47 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:38:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:39:03 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:39:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:39:22 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:39:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:39:39 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 17:39:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:39:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:40:15 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:40:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:40:35 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 17:40:49 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:00 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:41:07 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:14 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:20 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:41:50 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:42:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:42:15 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:42:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 17:42:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:42:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:42:58 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 17:43:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 17:43:18 UTC
+
+  [REST] Rate limited — pausing 47m 41s. Resuming at 18:31:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:31:13 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:31:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:31:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:31:37 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:31:44 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:31:52 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:32:03 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 18:32:21 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 18:32:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:32:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:32:52 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:33:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:33:14 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 18:33:24 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:33:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:33:38 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:33:45 UTC
+
+  [REST] Rate limited — pausing 8s. Resuming at 18:34:06 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:34:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:34:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:34:35 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:34:45 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:34:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:35:04 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:35:15 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:35:26 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 18:35:36 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:35:43 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 18:36:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:36:15 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:36:26 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:36:32 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:36:43 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:36:52 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:37:00 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:37:07 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:37:18 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:37:30 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:37:41 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:37:52 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:38:03 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:38:14 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:38:21 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:38:31 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:38:39 UTC
+
+  [REST] Rate limited — pausing 6s. Resuming at 18:38:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:39:05 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:39:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:39:23 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:39:33 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:39:40 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 18:39:51 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:39:57 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:40:16 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 18:40:25 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:40:36 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 18:40:50 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:41:01 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:41:08 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:41:15 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:41:21 UTC
+
+  [REST] Rate limited — pausing 3s. Resuming at 18:41:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:41:44 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:41:51 UTC
+
+  [REST] Rate limited — pausing 5s. Resuming at 18:42:09 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:42:16 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:42:26 UTC
+
+  [REST] Rate limited — pausing 2s. Resuming at 18:42:34 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:42:52 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:42:59 UTC
+
+  [REST] Rate limited — pausing 4s. Resuming at 18:43:12 UTC
+
+  [REST] Rate limited — pausing 1s. Resuming at 18:43:19 UTC
+
+  [REST] Rate limited — pausing 47m 41s. Resuming at 19:31:05 UTC
